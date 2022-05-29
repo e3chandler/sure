@@ -12,5 +12,9 @@ describe('InstructionsBar', () => {
   });
 
   // TODO: Challenge 3
-  it('should call the onClick prop when the button is clicked', () => {});
+  it('should call the onClick prop when the button is clicked', () => {
+    const { getByText } = renderWithProviders(<InstructionsBar {...defaultProps} />);
+    expect(getByText('View challenges').click())
+    expect(defaultProps.onClick).toHaveBeenCalled()
+  });
 });
