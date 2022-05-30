@@ -4,6 +4,7 @@ import routes from '../../constants/backend'
 import { useQuery, useMutation, useQueryClient } from 'react-query'
 import { Button, Box } from '@mui/material';
 import { PolicyHolder, PolicyHolderResponse } from './types'
+import TodosView from '../TodosView'
 
 const getNewPolicyHolder = () : PolicyHolder => ({
   name: 'Ryann Chandler',
@@ -60,17 +61,16 @@ const PolicyHoldersView = () => {
       </Box>
       
       <Button 
-        sx={{
-          marginTop: '20px'
-        }}
+        sx={{ marginTop: '20px' }}
         onClick={() => mutation.mutate(getNewPolicyHolder())}
         variant="contained"
         color="primary"
         size="large"
         disabled={tables.length > 1}
       >
-        Add a policyholder
+        Add a policy holder
       </Button>
+      <TodosView />
     </Box>
   )
 }

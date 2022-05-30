@@ -4,9 +4,9 @@ import { renderWithProviders } from '../../utils/test';
 describe('NavBar', () => {
   const defaultProps = {
     links: [
-      { text: 'Link1', href: '/link1' },
-      { text: 'Link2', href: '/link2' },
-      { text: 'Link3', href: '/link3' },
+      { text: 'Link1', href: '/link1', 'data-testid': 'Link1'},
+      { text: 'Link2', href: '/link2', 'data-testid': 'Link2' },
+      { text: 'Link3', href: '/link3', 'data-testid': 'Link3' },
     ],
   };
 
@@ -26,14 +26,14 @@ describe('NavBar', () => {
 
   // Challenge 2 again.
   it('should render an `href` attribute for each link - non snapshot', () => {
-    const { getByText } = renderWithProviders(<NavBar {...defaultProps} />);
+    const { getByTestId } = renderWithProviders(<NavBar {...defaultProps} />);
     const link1 = defaultProps.links[0]
-    expect(getByText(link1.text).closest('a')).toHaveAttribute('href', link1.href)
+    expect(getByTestId(link1.text)).toHaveAttribute('href', link1.href)
 
     const link2= defaultProps.links[1]
-    expect(getByText(link2.text).closest('a')).toHaveAttribute('href', link2.href)
+    expect(getByTestId(link2.text)).toHaveAttribute('href', link2.href)
     
     const link3 = defaultProps.links[2]
-    expect(getByText(link3.text).closest('a')).toHaveAttribute('href', link3.href)
+    expect(getByTestId(link3.text)).toHaveAttribute('href', link3.href)
   })
 });

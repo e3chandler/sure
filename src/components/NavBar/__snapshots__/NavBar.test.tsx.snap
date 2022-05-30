@@ -16,6 +16,7 @@ exports[`NavBar should render an \`href\` attribute for each link 1`] = `
     </a>
     <a
       class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-13286rk-MuiButtonBase-root-MuiButton-root"
+      data-testid="Link1"
       href="/link1"
       tabindex="0"
     >
@@ -26,6 +27,7 @@ exports[`NavBar should render an \`href\` attribute for each link 1`] = `
     </a>
     <a
       class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-13286rk-MuiButtonBase-root-MuiButton-root"
+      data-testid="Link2"
       href="/link2"
       tabindex="0"
     >
@@ -36,6 +38,7 @@ exports[`NavBar should render an \`href\` attribute for each link 1`] = `
     </a>
     <a
       class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-13286rk-MuiButtonBase-root-MuiButton-root"
+      data-testid="Link3"
       href="/link3"
       tabindex="0"
     >
