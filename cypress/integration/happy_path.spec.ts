@@ -19,7 +19,6 @@ describe('happy path', () => {
       cy.intercept('GET', `${BASE_URL}${routes.policyHolders.path}`, data).as('getRequest')
       cy.getTestEl('policyholders_link').click()
       cy.get('@getRequest').its('response.statusCode').should('eq', 200)
-      cy.get('@getRequest').then(console.log)
       cy.getTestEl('Policy Holder 1').should('be.visible')
       cy.contains('Ryann Chandler').should('be.visible')
       cy.contains('123 ABC Street Unit 4, Nashville Tn, 37214').should('be.visible')
