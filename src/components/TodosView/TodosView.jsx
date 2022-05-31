@@ -18,7 +18,7 @@ export default () => {
       <List>
         {todos.map(todo => (
           <ListItem>
-          <ListItemButton>
+          <ListItemButton divider>
             <ListItemText>
               {todo}
             </ListItemText>

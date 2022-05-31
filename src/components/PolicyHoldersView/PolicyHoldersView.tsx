@@ -2,7 +2,7 @@ import { getJSON, postJSON } from '../../backend/api'
 import InfoTable from '../InfoTable'
 import routes from '../../constants/backend'
 import { useQuery, useMutation, useQueryClient } from 'react-query'
-import { Button, Box } from '@mui/material';
+import { Button, Box, CircularProgress } from '@mui/material';
 import { PolicyHolder, PolicyHolderResponse } from './types'
 import TodosView from '../TodosView'
 
@@ -31,7 +31,7 @@ const PolicyHoldersView = () => {
       }
     })
 
-  if (query.isLoading || mutation.isLoading) return <div>...Loading</div>;
+  if (query.isLoading || mutation.isLoading) return <CircularProgress />;
   if (query.error || mutation.isError) return <div>...error</div>;
 
   const { policyHolders } = queryClient.getQueryData<PolicyHolderResponse>('policyHolders') as PolicyHolderResponse;

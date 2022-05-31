@@ -1,4 +1,4 @@
-const BASE_URL= 'https://fe-interview-technical-challenge-api-git-main-sure.vercel.app'
+export const BASE_URL= 'https://fe-interview-technical-challenge-api-git-main-sure.vercel.app'
 
 export const getJSON = async <Type>(route: string) : Promise<Type> => {
   return await handleResponse(await fetch(getUrl(route)))
