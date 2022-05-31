@@ -1,5 +1,5 @@
-import { Link, Box } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link, Box, Button } from '@mui/material';
+import { Link as RouterLink, NavLink } from 'react-router-dom';
 type TNavBar = {
   links: {
     text: string;
@@ -29,23 +29,22 @@ function NavBar({ links }: TNavBar) {
         <img src="/surelogo.svg" alt="logo"></img>
       </Link>
 
+      {/* Use NavLink for the built in active class handling and accessibility */}
       {links.map(({ text, href, 'data-testid': dataTestId }) => (
-        <Link
-          component={RouterLink}
+        <Button
+          component={NavLink}
           key={href}
           to={href}
-          color="#fff"
-          underline="hover"
           sx={{
-            cursor: 'pointer',
-            '&:not(:last-of-type)': {
-              marginBottom: '16px',
-            },
+            color: '#fff',  
+            '&.active': {
+              backgroundColor: '#0070ff'
+            }
           }}
           data-testid={dataTestId}
         >
           {text}
-        </Link>
+        </Button>
       ))}
     </Box>
   );

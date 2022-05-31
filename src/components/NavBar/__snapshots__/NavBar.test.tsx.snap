@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should render an \`href\` attribute for each link 1`] = `
+<div>
+  <aside
+    class="MuiBox-root css-1231o5f"
+  >
+    <a
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-x6o2tr-MuiTypography-root-MuiLink-root"
+      href="/"
+    >
+      <img
+        alt="logo"
+        src="/surelogo.svg"
+      />
+    </a>
+    <a
+      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-13286rk-MuiButtonBase-root-MuiButton-root"
+      data-testid="Link1"
+      href="/link1"
+      tabindex="0"
+    >
+      Link1
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </a>
+    <a
+      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-13286rk-MuiButtonBase-root-MuiButton-root"
+      data-testid="Link2"
+      href="/link2"
+      tabindex="0"
+    >
+      Link2
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </a>
+    <a
+      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-13286rk-MuiButtonBase-root-MuiButton-root"
+      data-testid="Link3"
+      href="/link3"
+      tabindex="0"
+    >
+      Link3
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </a>
+  </aside>
+</div>
+`;

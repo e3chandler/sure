@@ -23,7 +23,7 @@ function InfoTable({ header, rows, ...boxProps }: TInfoTable) {
       </Typography>
       <TableContainer component={Paper}>
         <MuiTable sx={{ minWidth: { sm: 650 } }} aria-label="table">
-          <TableBody>
+          <TableBody data-testid={`${header}`}>
             {rows.map(({ key, value }) => (
               <TableRow key={key}>
                 <TableCell>{key}</TableCell>
