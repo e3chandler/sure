@@ -15,14 +15,16 @@ describe('happy path', () => {
      * - Assert that a network request is made
      * - Assert that data from the network is displayed
      */
-    cy.intercept('GET', `${BASE_URL}/${routes.policyHolders.path}`).as('getRequest')
-    cy.getTestEl('policyholders_link').click()
-    cy.get('@getRequest').its('response.statusCode').should('eq', 200)
-
-    cy.getTestEl('Policy Holder 1').should('be.visible')
-    cy.contains('Mrs. Holder').should('be.visible')
-    cy.contains('123 Lane Ave 3H, Santa Monica CA, 90405').should('be.visible')
-    cy.contains('1-989-989-9898').should('be.visible')
-    cy.contains('29').should('be.visible')
+    cy.fixture('example').then(data => {
+      cy.intercept('GET', `${BASE_URL}/${routes.policyHolders.path}`, data).as('getRequest')
+      cy.getTestEl('policyholders_link').click()
+      cy.get('@getRequest').its('response.statusCode').should('eq', 200)
+      cy.get('@getRequest').then(console.log)
+      cy.getTestEl('Policy Holder 1').should('be.visible')
+      cy.contains('Ryann Chandler').should('be.visible')
+      cy.contains('123 ABC Street Unit 4, Nashville Tn, 37214').should('be.visible')
+      cy.contains('615-210-8078').should('be.visible')
+      cy.contains('36').should('be.visible')
+    })
   });
 });

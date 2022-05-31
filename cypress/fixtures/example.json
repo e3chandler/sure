@@ -1,5 +1,19 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "statusCode": 200,
+  "ok": true,
+  "body": {
+    "policyHolders": [{
+      "name": "Ryann Chandler",
+      "age": 36,
+      "address": {
+        "line1": "123 ABC Street",
+        "line2": "Unit 4",
+        "city": "Nashville",
+        "state": "Tn",
+        "postalCode": "37214"
+      },
+      "phoneNumber": "615-210-8078",
+      "isPrimary": true
+    }]
+  }
 }
