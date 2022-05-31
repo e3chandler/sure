@@ -16,7 +16,7 @@ describe('happy path', () => {
      * - Assert that data from the network is displayed
      */
     cy.fixture('example').then(data => {
-      cy.intercept('GET', `${BASE_URL}/${routes.policyHolders.path}`, data).as('getRequest')
+      cy.intercept('GET', `${BASE_URL}${routes.policyHolders.path}`, data).as('getRequest')
       cy.getTestEl('policyholders_link').click()
       cy.get('@getRequest').its('response.statusCode').should('eq', 200)
       cy.get('@getRequest').then(console.log)

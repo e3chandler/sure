@@ -1,5 +1,5 @@
 export const routes = {
   policyHolders: {
-    path: 'api/policyholders'
+    path: '/api/policyholders'
   }
 }
